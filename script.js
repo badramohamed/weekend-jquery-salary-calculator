@@ -45,7 +45,6 @@ function onsubmit() {
     
 
 
-
 $('#salary-table').append(`
 '<tr> 
     <td>${firstName}</td>
@@ -59,18 +58,20 @@ $('#salary-table').append(`
 
 `);
 
-function montlyCost (){
+
+}
+function montlyTotal (){
 let montlyCost =0;
 for(let i=0; i<employeelist.length; i++){
     montlyCost +=(employeelist[i].annualSalary)/12;
     let el= $ ('#totalmonthlyCost');
     el.empty();
     el.append('total montly: ${montlyCost}')
-} if (MontlyCost>20000){
+} if (montlyCost>-20000){
     $("#totalmonthlyCost").css("background-color", "red")
 }
 }
 
 
-}
+
      
