@@ -12,9 +12,11 @@ function onReady( ) {
    // console.log('titleHeader', <h1>....</h1>)
 
    $(document).on('click', '#submit-btn', onsubmit);
+   $(document).on('click', '.delete-btn', onDelete);
 
 
 }
+
 function onsubmit() {
     let firstName=$('.first-name').val();
     console.log('firstName', firstName);
@@ -31,11 +33,23 @@ function onsubmit() {
     let annualSalary= $('.annual-salary').val();
     console.log('annual-salary', annualSalary);
 
+$('#salary-table').append(`
+'<tr> 
+    <td>${firstName}</td>
+    <td> ${lastName}</td>
+    <td> ${idNumber}</td>
+    <td> ${Title}</td>
+    <td> ${annualSalary}</td>
+</td>
+    <button class="delete-btn"> delete</button>
+</trd');
+
+`);
+
+$('.salary-table').val('');
+
+
+
 }
 
-
-
-
-
-
-})
+     
