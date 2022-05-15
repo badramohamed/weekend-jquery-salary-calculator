@@ -16,7 +16,17 @@ function onReady( ) {
 
 
 }
+function onDelete(){
+    let  tr= $(this).parent().parent();
+    let employee= $(this)
+    .parent()
+    .siblings()
+    .first()
+    .text();
+alert('uh oh deleted ${employee}.', employee);
+tr.remove();
 
+}
 function onsubmit() {
     let firstName=$('.first-name').val();
     console.log('firstName', firstName);
@@ -33,6 +43,8 @@ function onsubmit() {
     let annualSalary= $('.annual-salary').val();
     console.log('annual-salary', annualSalary);
 
+
+
 $('#salary-table').append(`
 '<tr> 
     <td>${firstName}</td>
@@ -40,15 +52,24 @@ $('#salary-table').append(`
     <td> ${idNumber}</td>
     <td> ${Title}</td>
     <td class=annualSalary${annualSalary}"</td>
-    <td> button class="delete-btn"> Delete </button> 
+    <td> <button class="delete-btn"> delete </button> 
 </td');
+</tr>
 
 `);
 
-$('.salary-table').val('');
+$('.firstName').val('');
+$('.lastName').val('');
+$('.idNumber').val('');
+$('.title').val('');
+$('.annualSalary').val();
 
 
 
 }
+
+
+
+
 
      
