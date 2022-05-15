@@ -39,10 +39,9 @@ $('#salary-table').append(`
     <td> ${lastName}</td>
     <td> ${idNumber}</td>
     <td> ${Title}</td>
-    <td> ${annualSalary}</td>
-</td>
-    <button class="delete-btn"> delete</button>
-</trd');
+    <td class=annualSalary${annualSalary}"</td>
+    <td> button class="delete-btn"> Delete </button> 
+</td');
 
 `);
 
