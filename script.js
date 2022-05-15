@@ -42,6 +42,7 @@ function onsubmit() {
     
     let annualSalary= $('.annual-salary').val();
     console.log('annual-salary', annualSalary);
+    
 
 
 
@@ -58,18 +59,18 @@ $('#salary-table').append(`
 
 `);
 
-$('.firstName').val('');
-$('.lastName').val('');
-$('.idNumber').val('');
-$('.title').val('');
-$('.annualSalary').val();
-
-
-
+function montlyCost (){
+let montlyCost =0;
+for(let i=0; i<employeelist.length; i++){
+    montlyCost +=(employeelist[i].annualSalary)/12;
+    let el= $ ('#totalmonthlyCost');
+    el.empty();
+    el.append('total montly: ${montlyCost}')
+} if (MontlyCost>20000){
+    $("#totalmonthlyCost").css("background-color", "red")
+}
 }
 
 
-
-
-
+}
      
