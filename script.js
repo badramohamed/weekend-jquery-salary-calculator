@@ -74,12 +74,12 @@ function montlyTotal (){
 let montlyCost =0;
 for(let i=0; i<employeelist.length; i++){
    montlyCost+= Number(totalMonthly[i])
-   $('.monthlyAmmount').text(montlyCost);
+   $('.totalmonthlyCost').text(montlyCost);
    
     
 } $('.monthlyAmmount').text(montlyCost)
 if (montlyCost>-20000){
-    $("#totalmonthlyCost").css("background-color", "red")
+    $('.totalmonthlyCost').css("background-color", "red")
 }
 }
 
