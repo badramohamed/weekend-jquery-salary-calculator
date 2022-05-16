@@ -1,6 +1,7 @@
 console.log('in script js');
 
 $(document).ready(onReady);
+let totalMonthly=[];
 
 function onReady( ) {
     console.log('so ready!');
@@ -57,17 +58,27 @@ $('#salary-table').append(`
 </tr>
 
 `);
+$('.first-name').val('');
+$('.last-name').val('');
+$('.id-number').val('');
+$('.title-name').val('');
+$('.annual-salary').val();
 
+
+totalMonthly.push(annualSalary);
+montlyTotal();
 
 }
+
 function montlyTotal (){
 let montlyCost =0;
 for(let i=0; i<employeelist.length; i++){
-    montlyCost +=(employeelist[i].annualSalary)/12;
-    let el= $ ('#totalmonthlyCost');
-    el.empty();
-    el.append('total montly: ${montlyCost}')
-} if (montlyCost>-20000){
+   montlyCost+= Number(totalMonthly[i])
+   $('.monthlyAmmount').text(montlyCost);
+   
+    
+} $('.monthlyAmmount').text(montlyCost)
+if (montlyCost>-20000){
     $("#totalmonthlyCost").css("background-color", "red")
 }
 }

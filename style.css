@@ -11,6 +11,8 @@ h1{
     text-align: center;
     height: 100px;
     color: white;
+   
+
     
 }
 
@@ -19,8 +21,7 @@ input {
     width: 20%;
     margin-bottom: 10px ;
     padding-right: 5px;
- border-radius: 0% ;
- border-width: thin;
+
 }
 
 table{
@@ -45,4 +46,23 @@ th{
 
 .submit-btn{
      cursor: pointer;
+}
+.annualSalary{
+    background-color: white;
+   
+}
+
+tbody{
+    ;
+}
+
+.salary-table{
+    border: 0in;
+}
+
+header{
+    background-color: rgb(104,102,102);
+    text-align: center;
+    height: 100px;
+    color: white;
 }
